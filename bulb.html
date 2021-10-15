@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb - on/off</title>
+    <style>
+        body {
+            background-color: rgb(29, 29, 219);
+            min-height: 90vh;
+        }
+
+        .container {
+            min-height: 70vh;
+            width: 40%;
+            height: 70%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        button {
+            background-color: rgb(29, 29, 219);
+            color: #fff;
+            font-size: large;
+            font-weight: bolder;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 23px;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: .3s ease-in;
+        }
+
+        button:hover {
+            background-color: rgb(55, 55, 223);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Turn the Bulb on/off</h1>
+        <img id="bulb" src="bulb_off.png" alt="bulb_off">
+        <div class="btns">
+            <button onclick=bulbOn()>Turn On</button>
+            <button onclick=bulbOff()>Turn Off</button>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script>
+        const bulb = document.getElementById("bulb")
+
+        bulbOn = () => {
+            bulb.src = 'bulb_on.png'
+            // console.log("Button on is clicked");
+        }
+        bulbOff = () => {
+            bulb.src = 'bulb_off.png'
+            // console.log("Button off is clicked");
+        }
+    </script>
+</body>
+
+</html>
